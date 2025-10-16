@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Counter</title>
+    <!-- Load jQuery from official CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7U6+" crossorigin="anonymous"></script>
+    <style>
+        /* Styles for the counter page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #counter-value {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Display element for counter value -->
+    <div id="counter-value">0</div>
+    
+    <!-- Increment and Decrement buttons -->
+    <button id="increment-btn">Increment</button>
+    <button id="decrement-btn">Decrement</button>
+    
+    <script>
+        // Counter logic
+        $(document).ready(function() {
+            let counter = 0;
+
+            // Increment button click event
+            $('#increment-btn').click(function() {
+                counter++;
+                $('#counter-value').text(counter);
+            });
+
+            // Decrement button click event
+            $('#decrement-btn').click(function() {
+                counter--;
+                $('#counter-value').text(counter);
+            });
+        });
+    </script>
+</body>
+</html>
